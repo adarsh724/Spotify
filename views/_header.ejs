@@ -1,0 +1,20 @@
+<header>
+
+    <div class="home-icon main-icon"><i class="fa-brands fa-spotify" style="color: #ebebeb;"></i></div>
+    <div id="search-and-icon">
+    <a href="/" id="home-anchor"><div class="home-icon"> <i class="fa-solid fa-house" style="color: #ffffff;"></i></div></a>
+        <div id="search-bar-nav"><i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search Your Song" id="search-input">
+        </div>
+    </div>
+
+<div id="Sign-buttons">
+    <%if(locals.user){%>
+        <button class="auth-btn"><%=user.name%></button>
+        <a href="/users/destroy-session"><button class="auth-btn">Sign out</button></a>
+   <% }else{%>
+    <button class="auth-btn" onclick="window.location.href='/users/sign-in'" >Sign in</button>
+    <button class="auth-btn" onclick="window.location.href='/users/sign-up'">Sign up</button>
+    <% }%>
+</div>
+</header>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="whole-body">
+      <section id="library-section">
+        <div class="library-nav">
+          <div id="library-heading"><strong>Your library</strong></div>
+          <div class="icons">
+            <i class="fa-solid fa-plus" aria-label="Add playlist"></i>
+            <i
+              class="fa-solid fa-up-right-and-down-left-from-center"
+              aria-label="Expand view"
+            ></i>
+          </div>
+        </div>
+
+        <button id="playlist-btn">Playlists</button>
+
+        <div id="search-bar">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input
+            type="search"
+            placeholder="Search Your Playlist"
+            aria-label="Search playlist"
+          />
+        </div>
+
+        <div class="blocks">
+          <a href="/songs/likedSongs"  id="anchor-tag" class="favourite-btn">
+            <div class="block">
+              <div>
+                <img
+                  src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84e913f0317b78a75653c17e22"
+                  alt="Liked Songs Cover"
+                />
+              </div>
+              <p>Your favourites</p>
+            </div>
+          </a>
+          <a href="/songs/history"  class="favourite-btn">
+            <div class="block">
+              <div>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2961/2961948.png"
+                  alt="History Songs Cover"
+                />
+              </div>
+              <p>History</p>
+            </div>
+          </a>
+        </div>
+
+        
+        
+      </section>
+
+      <section class="main-section">
+        <h1 id="page-heading">🎵 List of Songs</h1>
+        <ul id="songs-ul-list">
+          <% for (let song of songs) { %>
+          <li class="song-item">
+            <div class="song">
+              <img
+                src="<%= song.coverArt %>"
+                alt="Cover Art for <%= song.title %>"
+                class="cover-image"
+              />
+              <h3><%= song.title %></h3>
+              <p><strong>Artist:</strong> <%= song.artist %></p>
+              <div class="like-icon">
+                <button
+                  onclick="songPlay('<%= song.url %>')" 
+                  class="play-btn"
+                  aria-label="Play <%= song.title %>"
+                >
+                  ▶
+                </button>
+                <button
+                  class="like-btn"
+                  data-song-id="<%= song.id %>"
+                  aria-label="Add to favourites"
+                  style="background: none;
+                  border: none;
+                  color: white;"
+                >
+                  <i class="fa-solid fa-heart"></i> Add to favourites
+                </button>
+              </div>
+            </div>
+          </li>
+          <% } %>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

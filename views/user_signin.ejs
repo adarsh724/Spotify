@@ -1,0 +1,28 @@
+<head>
+  <title><%=title%></title>
+  <link rel="stylesheet" href="/css/usrer_signin.css" />
+</head>
+
+<body>
+  <div id="page-heading">
+    <h1>Sign In</h1>
+  </div>
+  <div class="sign-in-form">
+    <form action="/users/create-session" method="post">
+      <input type="email" name="email" placeholder="abc@gmail.com" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input type="submit" name="" id="" value="Submit" />
+    </form>
+    <p><a href="/users/auth/google" class="google-btn">Google SignIn / SignUp</a></p>
+
+    
+
+    <!-- New “Create One” link below the form -->
+    <div class="no-account">
+      <h3>
+        Don’t have an account?
+        <a href="/users/sign-up">Create One</a>
+      </h3>
+    </div>
+  </div>
+</body>

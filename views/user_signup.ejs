@@ -1,0 +1,27 @@
+<head>
+  <title><%=title%></title>
+  <link rel="stylesheet" href="/css/usrer_signup.css" />
+</head>
+<body>
+  <div id="page-heading">
+    <h1>Sign Up</h1>
+  </div>
+  <div class="sign-up-form">
+    <form action="/users/create" method="post">
+    <input type="text" name="name" id="" placeholder="Enter Your Name">
+      <input type="email" name="email" placeholder="abc@gmail.com" required />
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input type="submit" name="" id="" value="Submit" />
+      <p><a href="/users/auth/google" class="google-btn">Google SignIn / SignUp</a></p>
+      
+
+      <div class="no-account">
+      <h3>
+        Already have an account?
+        <a href="/users/sign-in">Sign In</a>
+      </h3>
+    </div>
+    </form>
+  </div>
+</body>

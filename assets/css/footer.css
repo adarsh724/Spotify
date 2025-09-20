@@ -1,0 +1,29 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #181818;
+  padding: 12px 20px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer audio {
+  width: 100%;
+  max-width: 600px; /* max width for bigger screens */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  background: #282828;
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+footer audio:hover, 
+footer audio:focus {
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}

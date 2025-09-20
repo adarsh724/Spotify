@@ -1,0 +1,96 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(29, 29, 29);
+  padding: 0 20px; /* Add some horizontal padding */
+}
+
+#search-bar-nav {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 8px 16px;
+  background-color: #2a2a2a;
+  gap: 10px;
+  margin: 16px 0;
+  transition: background-color 0.4s ease;
+  flex: 1; /* So it can grow if container allows */
+  max-width: 400px; /* Prevent from growing too large on wide screens */
+}
+
+#search-bar-nav:hover {
+  background-color: #3a3a3a;
+}
+
+#search-bar-nav i {
+  color: #b3b3b3;
+  font-size: 16px;
+}
+
+#search-bar-nav input[type="search"] {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  flex: 1;
+}
+
+#search-bar-nav input::placeholder {
+  color: #888;
+}
+
+.home-icon {
+  background-color: rgb(54, 53, 53);
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.home-icon:hover {
+  box-shadow: 5px 5px 15px rgb(54, 53, 53);
+  transform: scale(1.05);
+}
+
+.main-icon {
+  padding: 0;
+  font-size: 2rem;
+}
+
+#search-and-icon {
+  display: flex;
+  align-items: center;
+  width: 22%;
+  justify-content: space-between;
+  gap: 10px; /* Add small gap between icons and search */
+}
+
+#Sign-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-btn {
+  padding: 10px 20px;
+  background-color: #1db954; /* Spotify green */
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.auth-btn:hover {
+  background-color: #1ed760;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}

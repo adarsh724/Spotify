@@ -1,0 +1,27 @@
+<div class="whole-body">
+  <%- include('_sidebar'); %>
+
+  <section class="main-section">
+    <h1 id="page-heading">💜 Your Favourite Songs</h1>
+    <ul id="songs-ul-list">
+      <% for (let song of songs) { %>
+        <li class="song-item">
+          <div class="song">
+            <img src="<%= song.coverArt %>" alt="Cover Art" class="cover-image" />
+            <h3><%= song.title %></h3>
+            <p><strong>Artist:</strong> <%= song.artist %></p>
+            <div class="like-icon">
+              <button onclick="songPlay('<%= song.url %>')" class="play-btn">▶</button>
+              <a href="/songs/unlike/<%= song.id %>" class="like-link" data-song-id="<%=song.id %>">
+  <i class="fa-solid fa-heart liked"></i> Remove from favourites
+</a>
+
+            </div>
+          </div>
+        </li>
+      <% } %>
+    </ul>
+  </section>
+</div>
+<script src="/js/index.js" defer></script>
+
