@@ -6,10 +6,10 @@ const User = require("../models/user");
 passport.use(
   new googleStrategy(
     {
-      clientID:
-        "",
-      clientSecret: "",
-      callbackURL: "",
+      // clientID:
+      //   "",
+      // clientSecret: "",
+      // callbackURL: "",
     },
     async function (accessToken, refreshToken, profile, done) {
       try {
